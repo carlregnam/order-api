@@ -9,10 +9,10 @@ router.post("/order",controller.create)
 // Buscar pedido com o metodo get
 router.get("/order/:id",controller.get)
 
-// Listar pedidos e chamo os metodos get
+// Listar pedidos e chamo o metodo get
 router.get("/order/list",controller.list)
 
-// Deletar pedido
+// Deletar pedido usando o meotodo .remove
 router.delete("/order/:id",controller.remove)
 
 module.exports = router
