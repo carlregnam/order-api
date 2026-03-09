@@ -59,7 +59,7 @@ async function getOrder(orderId) {
     }
 }
 
-// Listar pedidos
+// Listar pedidos e usando o await para que o processo continue 
 async function listOrders() {
 
     const pool = await db.connect()
@@ -70,7 +70,7 @@ async function listOrders() {
     return result.recordset
 }
 
-// Deletar pedido
+// Deletar pedido usando filtros necessarios
 async function deleteOrder(orderId) {
 
     const pool = await db.connect()
@@ -85,7 +85,7 @@ async function deleteOrder(orderId) {
 
 }
 
-module.exports = {
+module.exports = { //exporto os modulos necessarios 
     createOrder,
     getOrder,
     listOrders,

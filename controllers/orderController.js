@@ -1,6 +1,7 @@
 const service = require("../services/orderService")
 
-// Criar pedido
+//realizei os testes através do postamn
+// Criar pedido aqui da API
 async function create(req,res){
 
     try{
@@ -20,7 +21,7 @@ async function create(req,res){
 
 }
 
-// Buscar pedido
+// Buscar pedido da API
 async function get(req,res){
 
     try{
@@ -39,7 +40,7 @@ async function get(req,res){
 
 }
 
-// Listar
+// Listo na API
 async function list(req,res){
 
     const result = await service.listOrders()
@@ -48,7 +49,7 @@ async function list(req,res){
 
 }
 
-// Deletar
+// Deletar o pedido da API
 async function remove(req,res){
 
     await service.deleteOrder(req.params.id)

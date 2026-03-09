@@ -2,8 +2,9 @@ const sql = require("mssql/msnodesqlv8")
 
 const config = {
     connectionString: "Driver={ODBC Driver 17 for SQL Server};Server=localhost\\SQLSERVER2025;Database=OrderDB;Trusted_Connection=Yes;"
-}
+}//usei a autenticação do windows para banco, usando o sql server
 
+//aqui eu faço a conexção do banco de dados, e faço um pequeno retorno se consegui realizar a conexão 
 async function connect() {
 
     try {
@@ -23,4 +24,4 @@ async function connect() {
 
 }
 
-module.exports = { connect, sql }
+module.exports = { connect, sql } //exporto os modulos
